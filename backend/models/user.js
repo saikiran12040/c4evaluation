@@ -1,0 +1,16 @@
+const mongoose=require('mongoose')
+
+const UserSchema=mongoose.Schema({
+    name:{type:String,required:true},
+    email:{type:String,required:true},
+    password:{type:String,required:true},
+    gender:{type:String,required:true},
+    city:{type:String,required:true},
+    age:{type:String,required:true},
+    is_married:{type:boolean,required:true},
+},{
+    versionKey:false
+});
+
+const User=mongoose.model("user",UserSchema);
+module.exports={User}
